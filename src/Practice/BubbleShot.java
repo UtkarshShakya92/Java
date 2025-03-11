@@ -34,7 +34,7 @@ public class BubbleShot {
 					a[j+1] =temp;
 				}
 			}
-		}
+		} 
 		
 		System.out.println("Array After sorting "+Arrays.toString(a));
 		return a;

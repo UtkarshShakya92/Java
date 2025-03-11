@@ -8,47 +8,27 @@ public class DuplicateArray {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-      bruteForce();
-      SetUse();
+		int[] a = {2,3,4,5,6,6,5,3,7,4,8,8,8,8,4};
 		
-	}
-
-	public static int[] bruteForce()
-	{
-         int a []= {10,20,30,40,20,50,60,30};
+		int count =0;
 		
-		for(int i=0;i<a.length-1;i++)
+		for(int i=0;i<a.length;i++)
 		{
-			for(int j =i+1;j<a.length;j++)
-			{ 
-				if((a[i]==a[j]) && (i!=j))
+			count =1;
+			
+			for(int j=i+1;j<a.length;j++)
+			{
+				if(a[i] == a[j])
 				{
-					System.out.println(a[j]);
+					count++;
+					a[j]=0;
 				}
 			}
-		}
-		
-		return a; 
-		
-	}
-	
-	public static int[] SetUse()
-	{
-		int[] a= {10,20,30,40,20,50,60,30,30};
-		
-		System.out.println("By using SetUse");
-		
-		Set<Integer> s = new HashSet<>();
-		
-		for(int no: a)
-		{
-			boolean b = s.add(no);
 			
-			if(b == false)
+			if(count>1 && a[i]!=0)
 			{
-				System.out.println(no);
+				System.out.println(a[i] + "count by  "+ count);
 			}
 		}
-		return a;
 	}
 }

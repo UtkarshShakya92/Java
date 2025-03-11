@@ -5,27 +5,24 @@ public class Palingdrome {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		String str = "Welocome";
-		
-		System.out.println("the value of str is :"+ str);
-		
+		String s = "Madam";
+		s = s.toLowerCase();
+		System.out.println(s);
 		String rev = "";
 		
-		for(int i=str.length()-1;i>=0;i--)
+		for(int i=s.length()-1;i>=0;i--)
 		{
-			rev = rev+ str.charAt(i);
+			rev = rev+s.charAt(i);
 		}
 		
-		System.out.println("the value of rev is :"+ rev);
-		
-		if(str.equals(rev))
+		if(rev.equals(s))
 		{
-			System.out.println("the value "+ rev + "  is palingdrome of"+ str );
+			System.out.println("String is pallingdrone");
 		}
 		
 		else
 		{
-			System.out.println("the value "+ rev + "  is not palingdrome of"+ str );
+			System.out.println("String is not pallingdrone");
 		}
 
 	}

@@ -10,32 +10,26 @@ public class SecondLargest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		//int[] a= {10,30,50,20,40,80,70,30,70,80};
+		int[] a = {12,45,23,56,34,67,33,89,33,23,23,89,67};
 		
-		/*int largest = 0;//Integer.MIN_VALUE;
-		int secondLargest =0;// Integer.MIN_VALUE;
+		int highest = Integer.MIN_VALUE;
+		int secondhighest = Integer.MIN_VALUE;
 		
-		for(int i =0;i<a.length;i++)
-		{ 
-			if(a[i]>largest)
+		for(int i=0;i<a.length;i++)
+		{
+			if(a[i]>highest)
 			{
-				secondLargest = largest;
-				largest = a[i]; 
-				}
+				secondhighest = highest;
+				highest = a[i];
+			}
 			
-			else if (a[i] > secondLargest && a[i] < largest)
+			if(highest > a[i] && a[i] > secondhighest )
 			{
-				secondLargest = a[i];
+				secondhighest = a[i];
 			}
 		}
 		
-		System.out.println("The Second Largest value is "+ secondLargest );*/
-		
-		List<Integer> number =Arrays.asList(10,30,50,20,40,80,70,30,70,80);
-		Integer numbers = number.stream().distinct().sorted(Comparator.reverseOrder()).skip(1)
-				          .findFirst().get();
-		
-		System.out.println(numbers);
+		System.out.println(secondhighest);
 	}
 		
 		
